@@ -87,6 +87,9 @@ export default {
         password: 'testtest'
       }).then(response => {
         console.log(response.data)
+        // il faut utiliser les getters du store. L'attribut state est privé. 
+        // this.$store.getters.getPseudo 
+
         this.$store.state.first_name = response.data.first_name
         this.$store.state.last_name = response.data.last_name
         this.$store.state.pseudo = response.data.pseudo
